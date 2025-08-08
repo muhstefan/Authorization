@@ -7,6 +7,9 @@
     <link href="/static/css/base.css" rel="stylesheet"/>
 </head>
 <body>
+{% if error %}
+<p style="color: red;">{{ error }}</p>
+{% endif %}
 <header>
     <nav>
         <a href="/">Главная</a> |
