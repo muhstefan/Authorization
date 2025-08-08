@@ -3,7 +3,7 @@ from passlib.context import CryptContext
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from MyService.core.entities.users import UserCreate, UserUpdate, UserCreateDB
+from MyService.core.entities.users import UserUpdate, UserCreateDB
 from MyService.core.models import db_helper, User
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -14,9 +14,9 @@ def hash_password(password: str) -> str:
 
 
 async def prepare_user_create(
-    username: str = Form(...),
-    email: str = Form(...),
-    password: str = Form(...),
+        username: str = Form(...),
+        email: str = Form(...),
+        password: str = Form(...),
 ) -> UserCreateDB:
     password_hash = pwd_context.hash(password)
     return UserCreateDB(username=username, email=email, password_hash=password_hash)

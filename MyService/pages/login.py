@@ -1,15 +1,14 @@
+from fastapi import Depends, Response, APIRouter
 from fastapi.responses import RedirectResponse
-from starlette.requests import Request
-from fastapi import Depends, HTTPException, Response, APIRouter
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.ext.asyncio import AsyncSession
-
-from MyService.api_v1.auth.crud import get_user_by_username
-from MyService.api_v1.auth.security import verify_password, generate_and_set_tokens, decode_jwt_token
-from MyService.core.db import get_db
+from starlette.requests import Request
 
 from MyService.api_v1.auth.config import Production
+from MyService.api_v1.auth.crud import get_user_by_username
 from MyService.api_v1.auth.dependencies import get_user_soft
+from MyService.api_v1.auth.security import verify_password, generate_and_set_tokens
+from MyService.core.db import get_db
 from MyService.templates import templates
 
 router = APIRouter()

@@ -20,7 +20,6 @@ async def login(response: Response,
 
     generate_and_set_tokens(response, str(user.id), secure=Production)
 
-
     return {"message": "Logged in successfully"}
 
 

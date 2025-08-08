@@ -5,20 +5,20 @@
 {% block content %}
 
 
-    <h1>Регистрация нового пользователя</h1>
-    <form action="/pages/registration/" method="post">
-        <label>
-            Логин:
-            <input type="text" name="username" maxlength="25" required/>
-        </label>
-        <label>
-            Email:
-            <input type="email" name="email" maxlength="50" required/>
-        </label>
-        <label>
-            Пароль:
-            <input type="password" name="password" minlength="8" maxlength="25" required/>
-        </label>
-        <button type="submit">Зарегистрироваться</button>
-    </form>
+<h1>Регистрация нового пользователя</h1>
+<form action="/pages/registration/" method="post">
+    <label>
+        Логин:
+        <input maxlength="25" name="username" required type="text"/>
+    </label>
+    <label>
+        Email:
+        <input maxlength="50" name="email" required type="email"/>
+    </label>
+    <label>
+        Пароль:
+        <input maxlength="25" minlength="8" name="password" required type="password"/>
+    </label>
+    <button type="submit">Зарегистрироваться</button>
+</form>
 {% endblock %}

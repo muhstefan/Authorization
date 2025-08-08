@@ -1,7 +1,7 @@
 from sqlalchemy import select
 from sqlalchemy.engine import Result
-
 from sqlalchemy.ext.asyncio import AsyncSession  # это сессия для работы с бд
+
 from MyService.core.entities.users import UserCreateDB
 from MyService.core.models import User
 

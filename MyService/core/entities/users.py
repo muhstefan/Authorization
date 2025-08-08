@@ -22,6 +22,7 @@ class UserUpdate(BaseModel):
     email: Optional[str] = Field(default=None, max_length=25)
     password: Optional[str] = Field(default=None, max_length=25, min_length=8)
 
+
 class UserPublic(BaseModel):
     id: int
     username: str

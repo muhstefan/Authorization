@@ -3,16 +3,16 @@
 {% block title %}Вход{% endblock %}
 
 {% block content %}
-    <h1>Вход на сайт</h1>
-    <form action="/pages/login/" method="post">
-        <label>
-            Логин:
-            <input type="text" name="username" required/>
-        </label><br/>
-        <label>
-            Пароль:
-            <input type="password" name="password" required/>
-        </label><br/>
-        <button type="submit">Войти</button>
-    </form>
+<h1>Вход на сайт</h1>
+<form action="/pages/login/" method="post">
+    <label>
+        Логин:
+        <input name="username" required type="text"/>
+    </label><br/>
+    <label>
+        Пароль:
+        <input name="password" required type="password"/>
+    </label><br/>
+    <button type="submit">Войти</button>
+</form>
 {% endblock %}

@@ -24,9 +24,9 @@ async def registration_page(request: Request,
 
 @router.post("/registration/")
 async def create_user_with_redirect(
-    request: Request,
-    user_data: UserCreateDB = Depends(prepare_user_create),
-    session: AsyncSession = Depends(get_db),
+        request: Request,
+        user_data: UserCreateDB = Depends(prepare_user_create),
+        session: AsyncSession = Depends(get_db),
 ):
     try:
         user = await crud.create_user(session=session, user_data=user_data)
